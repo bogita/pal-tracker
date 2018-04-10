@@ -73,6 +73,7 @@ jobs:
 - name: deploy-production
   plan:
   - get: pal-tracker
+    passed: [deploy-review]
   - get: pal-tracker-artifacts
     passed: [deploy-review]
   - put: production-deployment
