@@ -17,6 +17,7 @@ public class TimeEntryController {
         this.timeEntryRepository = timeEntryRepository;
     }
 
+    @SpeedLogger
     @PostMapping
     public ResponseEntity create(@RequestBody TimeEntry timeEntryToCreate)
     {
