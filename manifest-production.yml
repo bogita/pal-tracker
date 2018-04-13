@@ -4,6 +4,6 @@ applications:
   path: build/libs/pal-tracker.jar
   host: pal-tracker-hmn
   env:
-      SECURITY_FORCE_HTTPS: true
+    SECURITY_FORCE_HTTPS: true
   services:
   - tracker-database
