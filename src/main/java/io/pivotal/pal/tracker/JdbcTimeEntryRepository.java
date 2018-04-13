@@ -52,7 +52,7 @@ public class JdbcTimeEntryRepository implements TimeEntryRepository {
     public TimeEntry find(long id) {
         try {
 
-            return (TimeEntry)getJdbcTemplate().queryForObject("SELECT * FROM time_entries WHERE id=?",
+            return getJdbcTemplate().queryForObject("SELECT * FROM time_entries WHERE id=?",
                         new Object[]{(int) id},
                         new BeanPropertyRowMapper<>(TimeEntry.class));
 
